@@ -1,0 +1,22 @@
+{
+  "name": "gulp-prepend",
+  "version": "0.1.0",
+  "description": "Simple Gulp plugin to prepend a string (with gulp-sourcemaps support)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": "git://github.com/bGute/gulp-prepend.git",
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "prepend"
+  ],
+  "author": "bGute",
+  "license": "MIT",
+  "homepage": "https://github.com/bGute/gulp-prepend",
+  "devDependencies": {},
+  "dependencies": {
+    "through2": "^4.0.2"
+  }
+}
