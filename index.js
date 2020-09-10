@@ -1,5 +1,6 @@
 const through = require('through2');
 const { SourceNode, SourceMapConsumer } = require('source-map');
+const { Buffer } = require('buffer');
 
 // Helper 
 function prependStream(prependText) {
@@ -42,4 +43,4 @@ module.exports = function (str) {
 	}
 
 	return through.obj(prependText);
-}
+};
