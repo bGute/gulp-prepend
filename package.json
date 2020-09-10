@@ -1,6 +1,6 @@
 {
   "name": "gulp-prepend",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "Simple Gulp plugin to prepend a string (with gulp-sourcemaps support)",
   "main": "index.js",
   "scripts": {
