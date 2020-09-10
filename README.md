@@ -1,5 +1,7 @@
 # gulp-prepend
 [![License:MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/bGute/gulp-prepend/blob/master/LICENSE)
+![Publish Package](https://github.com/bGute/gulp-prepend/workflows/Publish%20Package/badge.svg)
+[![npm version](https://badge.fury.io/js/gulp-prepend.svg)](https://badge.fury.io/js/gulp-prepend)
 
 Simple Gulp plugin to prepend a string (e.g. license text) with gulp-sourcemaps support.
 
