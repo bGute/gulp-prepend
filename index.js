@@ -19,16 +19,7 @@ module.exports = function (str) {
 			return callback(null, file);
 		}
 
-		// Handle buffers
-		if (file.isBuffer()) {
-			file.contents = Buffer.from(`${str}${file.contents}`);
-		}
-
-		// Handle streams
-		if (file.isStream()) {
-			file.contents = file.contents.pipe(prependStream(str));
-		}
-
+		// *** Update the source maps ***
 		if (file.sourceMap) {
 			const consumer = await new SourceMapConsumer(file.sourceMap);
 			const sourceNode = SourceNode.fromStringWithSourceMap(file.contents.toString(), consumer);
@@ -37,6 +28,17 @@ module.exports = function (str) {
 			// Update the source map of the file
 			const generator = sourceNode.toStringWithSourceMap({ file: file.sourceMap.file });
 			file.sourceMap = generator.map.toJSON();
+		}
+
+		// *** Update the file content ***
+		// Handle buffers
+		if (file.isBuffer()) {
+			file.contents = Buffer.from(`${str}${file.contents}`);
+		}
+
+		// Handle streams
+		if (file.isStream()) {
+			file.contents = file.contents.pipe(prependStream(str));
 		}
 
 		return callback(null, file);

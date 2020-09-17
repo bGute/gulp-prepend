@@ -17,7 +17,7 @@
   "homepage": "https://github.com/bGute/gulp-prepend",
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^7.8.1",
+    "eslint": "^7.9.0",
     "event-stream": "^4.0.1",
     "mocha": "^8.1.3",
     "vinyl": "^2.2.0"
